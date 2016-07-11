@@ -1,4 +1,4 @@
-FROM alpine
+FROM wicksy/alpine
 
 USER root
 
