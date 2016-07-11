@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker.io/alpine
 
 USER root
 
