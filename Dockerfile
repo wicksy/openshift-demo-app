@@ -1,4 +1,4 @@
-FROM wicksy/alpine
+FROM alpine:latest
 
 USER root
 
@@ -8,8 +8,8 @@ RUN apk update && \
 
 WORKDIR /etc/nginx
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY docker/nginx/index.html /usr/share/nginx/html/index.html
-COPY docker/nginx/50x.html /usr/share/nginx/html/50x.html
+COPY docker/nginx/index.html /var/lib/nginx/html/index.html
+COPY docker/nginx/50x.html /var/lib/nginx/html/50x.html
 
 RUN chown -R nginx:root /var/log/nginx
 
