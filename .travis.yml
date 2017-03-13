@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+language: python
+python:
+  - "2.7"
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get -y install make
+
+script:
+ - make build
+ - test/test.sh
